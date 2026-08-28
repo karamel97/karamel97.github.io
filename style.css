@@ -41,37 +41,63 @@ nav.site-nav a:hover { color: var(--green); }
 .lang-switch a { padding: 3px 7px; border-radius: 5px; color: var(--ink-soft); }
 .lang-switch a.active { background: var(--green-soft); color: var(--green); font-weight: 600; }
 
-/* Hero / logo alanı */
-.hero { padding: 70px 0 56px; text-align: center; }
-.hero-mark {
-  width: 92px; height: 92px; border-radius: 50%;
-  background: var(--green-soft); border: 1px solid var(--line);
-  display: flex; align-items: center; justify-content: center;
-  margin: 0 auto 30px;
+/* Hero — görsel kolajı + ortada mühür/logo */
+.hero { padding: 46px 0 64px; }
+.photo-strip {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto 0;
+  height: 220px;
 }
-.hero-mark svg { width: 42px; height: 42px; stroke: var(--green); fill: none; stroke-width: 1.6; }
-.hero-eyebrow { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 20px; }
-.hero h1 { font-family: var(--font-display); font-size: clamp(32px, 4.6vw, 46px); line-height: 1.22; font-weight: 500; margin: 0 auto 22px; max-width: 16ch; }
+.photo-strip .ph {
+  position: absolute;
+  top: 0;
+  background: var(--green-soft);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 26px rgba(35,68,57,0.08);
+}
+.photo-strip .ph1 { left: 0%;   width: 21%; height: 86%; top: 14%; border-radius: 120px 120px 18px 18px; }
+.photo-strip .ph2 { left: 21%;  width: 19%; height: 66%; top: 0%;  border-radius: 18px; }
+.photo-strip .ph3 { left: 40%;  width: 20%; height: 100%; top: 0%; border-radius: 18px 18px 120px 120px; }
+.photo-strip .ph4 { left: 60%;  width: 19%; height: 70%; top: 20%; border-radius: 18px; }
+.photo-strip .ph5 { left: 79%;  width: 21%; height: 82%; top: 6%;  border-radius: 18px 120px 18px 120px; }
+
+.hero-mark {
+  position: relative;
+  width: 86px; height: 86px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--line);
+  display: flex; align-items: center; justify-content: center;
+  margin: -43px auto 26px;
+  box-shadow: 0 8px 20px rgba(35,68,57,0.10);
+}
+.hero-mark svg { width: 38px; height: 38px; stroke: var(--green); fill: none; stroke-width: 1.6; }
+.hero-copy { text-align: center; }
+.hero h1 { font-family: var(--font-display); font-size: clamp(30px, 4.4vw, 44px); line-height: 1.24; font-weight: 500; margin: 0 auto 20px; max-width: 17ch; }
 .hero p.lede { font-size: 17.5px; color: var(--ink-soft); max-width: 50ch; margin: 0 auto; }
+
+@media (max-width: 700px) {
+  .photo-strip { height: 150px; }
+}
 
 /* Kategori grid */
 .section-head { max-width: 1000px; margin: 84px auto 36px; padding: 0 32px; text-align: center; }
 .section-head .eyebrow { font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); font-weight: 600; margin-bottom: 8px; }
 .section-head h2 { font-family: var(--font-display); font-size: 27px; font-weight: 500; margin: 0; }
 
-.categories { max-width: 1000px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.categories { max-width: 1000px; margin: 0 auto; padding: 0 32px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
 .category-card {
-  background: var(--surface); border: 1px solid var(--line); border-radius: 16px;
-  padding: 30px 20px; text-align: center; transition: border-color .15s ease, transform .15s ease;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  padding: 40px 32px; text-align: left; transition: border-color .15s ease, transform .15s ease;
+  display: flex; align-items: flex-start; gap: 20px;
 }
 .category-card:hover { border-color: var(--green); transform: translateY(-2px); text-decoration: none; }
 .cat-icon {
-  width: 52px; height: 52px; border-radius: 50%; background: var(--green-soft);
-  display: flex; align-items: center; justify-content: center; margin: 0 auto 16px;
+  flex-shrink: 0; width: 60px; height: 60px; border-radius: 50%; background: var(--green-soft);
+  display: flex; align-items: center; justify-content: center;
 }
-.cat-icon svg { width: 24px; height: 24px; stroke: var(--green); fill: none; stroke-width: 1.7; }
-.category-card h3 { font-family: var(--font-display); font-size: 15.5px; font-weight: 500; color: var(--ink); margin: 0 0 6px; line-height: 1.35; }
-.category-card p { font-size: 12.5px; color: var(--ink-soft); margin: 0; }
+.cat-icon svg { width: 27px; height: 27px; stroke: var(--green); fill: none; stroke-width: 1.6; }
+.category-card h3 { font-family: var(--font-display); font-size: 19px; font-weight: 500; color: var(--ink); margin: 4px 0 8px; line-height: 1.3; }
+.category-card p { font-size: 14px; color: var(--ink-soft); margin: 0; line-height: 1.55; }
 
 /* Makale listesi (kategori sayfası) */
 .article-list { max-width: 800px; margin: 0 auto; padding: 0 32px; }
