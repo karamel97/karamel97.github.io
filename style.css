@@ -151,20 +151,94 @@ nav.site-nav a:hover { color: var(--green); }
 .art-eyebrow { font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); margin-bottom: 18px; }
 .article-header h1 { font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); font-weight: 500; line-height: 1.3; margin: 0 0 20px; }
 .article-meta { font-size: 13.5px; color: var(--ink-soft); padding-bottom: 30px; }
-.article-body { max-width: 720px; margin: 0 auto; padding: 40px 32px 80px; font-size: 18px; line-height: 1.85; }
+
+.article-layout { max-width: 980px; margin: 0 auto; padding: 40px 32px 0; display: grid; grid-template-columns: 1fr 260px; gap: 56px; align-items: start; }
+.article-body { font-size: 18px; line-height: 1.85; padding: 0; }
 .article-body h2 { font-family: var(--font-display); font-size: 23px; font-weight: 500; margin: 46px 0 16px; }
 .article-body p { margin: 0 0 20px; }
 .article-body ul, .article-body ol { margin: 0 0 20px; padding-left: 22px; }
 .article-body li { margin-bottom: 8px; }
 .article-body blockquote { border-left: 2px solid var(--green); margin: 30px 0; padding: 2px 0 2px 22px; color: var(--ink-soft); font-style: italic; }
-.back-link { display: block; text-align: center; margin: 20px 32px 0; font-size: 14px; color: var(--ink-soft); }
+
+.article-aside { position: sticky; top: 90px; display: flex; flex-direction: column; gap: 36px; }
+.aside-block .aside-title { font-size: 12px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
+.tag-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.tag-pill { font-size: 12.5px; color: var(--green); background: var(--green-soft); padding: 6px 13px; border-radius: 30px; border: 1px solid var(--line); }
+.related-list { display: flex; flex-direction: column; gap: 14px; }
+.related-list a { font-family: var(--font-display); font-size: 14.5px; font-weight: 500; color: var(--ink); line-height: 1.4; }
+.related-list a:hover { color: var(--green); }
+
+.back-link { display: block; text-align: center; margin: 50px 32px 0; font-size: 14px; color: var(--ink-soft); }
 .back-link:hover { color: var(--green); }
+
+/* Yorumlar bölümü (makale altı) */
+.comments-section { max-width: 720px; margin: 90px auto 0; padding: 0 32px; }
+.comments-section .section-title { font-family: var(--font-display); font-size: 22px; font-weight: 500; margin: 0 0 26px; text-align: left; }
+.comment-item { padding: 20px 0; border-bottom: 1px solid var(--line); }
+.comment-item:first-of-type { border-top: 1px solid var(--line); }
+.comment-item .comment-head { display: flex; align-items: baseline; gap: 10px; margin-bottom: 6px; }
+.comment-item .comment-who { font-size: 14px; font-weight: 600; color: var(--ink); }
+.comment-item .comment-date { font-size: 12.5px; color: var(--ink-soft); }
+.comment-item .comment-text { font-size: 15px; color: var(--ink-soft); margin: 0 0 10px; line-height: 1.6; }
+.comment-item .reply-btn {
+  font-size: 12.5px; font-weight: 600; color: var(--green); background: none; border: none;
+  padding: 0; cursor: pointer;
+}
+.comment-item .reply-btn:hover { text-decoration: underline; }
+.author-reply {
+  margin: 14px 0 0 24px; padding: 14px 18px; background: var(--green-soft); border-radius: 12px;
+}
+.author-reply .comment-head { margin-bottom: 4px; }
+.author-reply .comment-who { color: var(--green-deep); }
+.author-reply .comment-who::after { content: " · site sahibi"; font-weight: 400; color: var(--ink-soft); font-size: 12px; }
+.author-reply .comment-text { color: var(--ink); margin: 0; }
+
+.comment-card {
+  margin-top: 30px; padding: 28px; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 18px;
+}
+.comment-card .comment-card-title {
+  display: flex; align-items: center; gap: 10px; font-family: var(--font-display);
+  font-size: 17px; font-weight: 500; color: var(--ink); margin: 0 0 22px;
+}
+.comment-card .comment-card-title svg { width: 20px; height: 20px; stroke: var(--green); fill: none; stroke-width: 1.7; flex-shrink: 0; }
+.comment-form { display: flex; flex-direction: column; gap: 14px; }
+.comment-form input, .comment-form textarea {
+  font-family: var(--font-body); font-size: 15px; padding: 12px 16px;
+  border: 1px solid var(--line); border-radius: 10px; background: var(--bg); color: var(--ink);
+}
+.comment-form input:focus, .comment-form textarea:focus { outline: none; border-color: var(--green); }
+.comment-form textarea { min-height: 110px; resize: vertical; }
+.comment-form .comment-form-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 4px; }
+.comment-form .btn-clear {
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  background: var(--bg); color: var(--ink-soft); border: 1px solid var(--line);
+  padding: 11px 22px; border-radius: 30px; cursor: pointer;
+}
+.comment-form .btn-clear:hover { background: var(--line); }
+.comment-form button[type="submit"] {
+  font-family: var(--font-body); font-size: 14px; font-weight: 600;
+  background: var(--green); color: #fff; border: none; padding: 11px 24px; border-radius: 30px; cursor: pointer;
+}
+.comment-form button[type="submit"]:hover { background: var(--green-deep); }
+.comment-note { font-size: 12.5px; color: var(--ink-soft); margin-top: 12px; }
+
+/* Literatür önerileri */
+.literature-section { max-width: 720px; margin: 70px auto 0; padding: 32px; background: var(--green-soft); border-radius: 20px; }
+.literature-section .section-title { font-family: var(--font-display); font-size: 19px; font-weight: 500; margin: 0 0 8px; }
+.literature-section .section-sub { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 20px; }
+.literature-item { padding: 14px 0; border-bottom: 1px solid rgba(35,68,57,0.12); }
+.literature-item:last-child { border-bottom: none; }
+.literature-item .lit-title { font-family: var(--font-display); font-size: 15px; font-weight: 500; color: var(--ink); }
+.literature-item .lit-source { font-size: 12.5px; color: var(--ink-soft); margin-top: 3px; }
 
 @media (max-width: 820px) {
   .categories { grid-template-columns: repeat(2, 1fr); }
   .courses, .testimonials { grid-template-columns: 1fr; }
   .about-hero { grid-template-columns: 1fr; }
   .about-photo { max-width: 220px; }
+  .article-layout { grid-template-columns: 1fr; }
+  .article-aside { position: static; flex-direction: row; flex-wrap: wrap; gap: 24px; }
   nav.site-nav { gap: 14px; }
   nav.site-nav a:not(.lang-switch a) { display: none; }
 }
