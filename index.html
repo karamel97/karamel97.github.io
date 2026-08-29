@@ -31,21 +31,20 @@
   <div class="nav-overlay"></div>
 </header>
 
-<section class="hero">
-  <div class="wrap">
-    <div class="photo-strip" aria-hidden="true">
-      <img class="ph ph1" src="1.png" alt="">
-      <img class="ph ph2" src="2.png" alt="">
-      <img class="ph ph3" src="3.png" alt="">
-      <img class="ph ph4" src="4.png" alt="">
-    </div>
-    <div class="hero-mark" aria-hidden="true">
-      <svg viewBox="0 0 24 24"><path d="M12 3v18M6 8v8M18 8v8" stroke-linecap="round"/></svg>
-    </div>
-    <div class="hero-copy">
-      <h1>İşitme kaybını anlamak, birlikte kolaylaşır.</h1>
-      <p class="lede">Koklear implant sürecinden dil gelişimine, işitsel rehabilitasyondan nörobilime — işitme kaybı olan bireyler ve aileleri için klinik deneyime dayanan yazılar.</p>
-    </div>
+<section class="hero-slider">
+  <div class="slides">
+    <img class="slide active" src="1.png" alt="">
+    <img class="slide" src="2.png" alt="">
+    <img class="slide" src="3.png" alt="">
+    <img class="slide" src="4.png" alt="">
+  </div>
+  <button class="slide-arrow prev" aria-label="Önceki görsel" type="button">‹</button>
+  <button class="slide-arrow next" aria-label="Sonraki görsel" type="button">›</button>
+  <div class="slide-dots">
+    <button class="dot active" data-index="0" aria-label="1. görsel" type="button"></button>
+    <button class="dot" data-index="1" aria-label="2. görsel" type="button"></button>
+    <button class="dot" data-index="2" aria-label="3. görsel" type="button"></button>
+    <button class="dot" data-index="3" aria-label="4. görsel" type="button"></button>
   </div>
 </section>
 
