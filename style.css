@@ -64,12 +64,15 @@ nav.site-nav a:hover { color: var(--green); }
   background: var(--green-soft);
   border: 1px solid var(--line);
   box-shadow: 0 10px 26px rgba(35,68,57,0.08);
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform .18s ease, opacity .15s ease;
 }
-.photo-strip .ph1 { left: 0%;   width: 21%; height: 86%; top: 14%; border-radius: 120px 120px 18px 18px; }
-.photo-strip .ph2 { left: 21%;  width: 19%; height: 66%; top: 0%;  border-radius: 18px; }
-.photo-strip .ph3 { left: 40%;  width: 20%; height: 100%; top: 0%; border-radius: 18px 18px 120px 120px; }
-.photo-strip .ph4 { left: 60%;  width: 19%; height: 70%; top: 20%; border-radius: 18px; }
-.photo-strip .ph5 { left: 79%;  width: 21%; height: 82%; top: 6%;  border-radius: 18px 120px 18px 120px; }
+.photo-strip .ph:hover { transform: translateY(-3px); }
+.photo-strip .ph1 { left: 4%;   width: 21%; height: 86%; top: 14%; border-radius: 120px 120px 18px 18px; }
+.photo-strip .ph2 { left: 27%;  width: 21%; height: 100%; top: 0%;  border-radius: 18px; }
+.photo-strip .ph3 { left: 52%;  width: 21%; height: 70%; top: 22%; border-radius: 18px 18px 120px 120px; }
+.photo-strip .ph4 { left: 75%;  width: 21%; height: 82%; top: 6%;  border-radius: 18px 120px 18px 120px; }
 
 .hero-mark {
   position: relative;
@@ -244,7 +247,7 @@ nav.site-nav a:hover { color: var(--green); }
 
 @media (max-width: 820px) {
   .categories { grid-template-columns: 1fr; }
-     .category-card { padding: 24px 20px; gap: 14px; }
+  .category-card { padding: 24px 20px; gap: 14px; }
   .cat-icon { width: 46px; height: 46px; }
   .cat-icon svg { width: 21px; height: 21px; }
   .category-card h3 { font-size: 17px; }
@@ -266,13 +269,13 @@ nav.site-nav a:hover { color: var(--green); }
   nav.site-nav .lang-switch { margin-top: 8px; }
   body.menu-open-lock { overflow: hidden; }
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  * { transition: none !important; }
-}
 @media (max-width: 420px) {
   .wrap, .section-head, .categories, .article-list, .courses, .suggestions,
   .article-header, .article-layout, .article-body, .comments-section, .literature-section {
     padding-left: 20px; padding-right: 20px;
   }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
 }
