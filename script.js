@@ -26,22 +26,38 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Hero fotoğraf kolajı — tıklanınca görseli karıştır
+// Hero slayt gösterisi
 document.addEventListener('DOMContentLoaded', function () {
-  var photos = document.querySelectorAll('.photo-strip .ph');
-  if (!photos.length) return;
-  var sources = Array.prototype.map.call(photos, function (img) { return img.getAttribute('src'); });
+  var slider = document.querySelector('.hero-slider');
+  if (!slider) return;
+  var slides = slider.querySelectorAll('.slide');
+  var dots = slider.querySelectorAll('.dot');
+  var prevBtn = slider.querySelector('.slide-arrow.prev');
+  var nextBtn = slider.querySelector('.slide-arrow.next');
+  var current = 0;
+  var timer;
 
-  photos.forEach(function (img) {
-    img.addEventListener('click', function () {
-      var current = img.getAttribute('src');
-      var options = sources.filter(function (s) { return s !== current; });
-      var next = options[Math.floor(Math.random() * options.length)];
-      img.style.opacity = '0';
-      setTimeout(function () {
-        img.setAttribute('src', next);
-        img.style.opacity = '1';
-      }, 150);
-    });
+  function goTo(index) {
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+    current = (index + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() {
+    clearInterval(timer);
+    timer = setInterval(next, 5000);
+  }
+
+  if (nextBtn) nextBtn.addEventListener('click', function () { next(); startAuto(); });
+  if (prevBtn) prevBtn.addEventListener('click', function () { prev(); startAuto(); });
+  dots.forEach(function (dot, i) {
+    dot.addEventListener('click', function () { goTo(i); startAuto(); });
   });
+
+  startAuto();
 });
