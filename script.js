@@ -25,3 +25,23 @@ document.addEventListener('DOMContentLoaded', function () {
     a.addEventListener('click', closeMenu);
   });
 });
+
+// Hero fotoğraf kolajı — tıklanınca görseli karıştır
+document.addEventListener('DOMContentLoaded', function () {
+  var photos = document.querySelectorAll('.photo-strip .ph');
+  if (!photos.length) return;
+  var sources = Array.prototype.map.call(photos, function (img) { return img.getAttribute('src'); });
+
+  photos.forEach(function (img) {
+    img.addEventListener('click', function () {
+      var current = img.getAttribute('src');
+      var options = sources.filter(function (s) { return s !== current; });
+      var next = options[Math.floor(Math.random() * options.length)];
+      img.style.opacity = '0';
+      setTimeout(function () {
+        img.setAttribute('src', next);
+        img.style.opacity = '1';
+      }, 150);
+    });
+  });
+});
