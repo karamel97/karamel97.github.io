@@ -1,63 +1,123 @@
-document.addEventListener('DOMContentLoaded', function () {
-  var toggle = document.querySelector('.menu-toggle');
-  var nav = document.querySelector('.site-nav');
-  var overlay = document.querySelector('.nav-overlay');
-  if (!toggle || !nav) return;
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İrem Yemeniciler — İşitme Sağlığı Üzerine</title>
+<meta name="description" content="Odyoloji ve nörobilim temelli, işitme kaybı olan bireyler ve aileleri için yazılar.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  function closeMenu() {
-    nav.classList.remove('open');
-    toggle.classList.remove('active');
-    document.body.classList.remove('menu-open-lock');
-    if (overlay) overlay.classList.remove('show');
-  }
-  function openMenu() {
-    nav.classList.add('open');
-    toggle.classList.add('active');
-    document.body.classList.add('menu-open-lock');
-    if (overlay) overlay.classList.add('show');
-  }
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="logo">İrem Yemeniciler</a>
+    <button class="menu-toggle" aria-label="Menü" type="button">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav">
+      <a href="index.html">Anasayfa</a>
+      <a href="index.html#kategoriler">Kategoriler</a>
+      <a href="egitim.html">Eğitim</a>
+      <a href="oneriler.html">Öneriler</a>
+      <a href="uzman-alani.html">Uzman</a>
+      <a href="index.html#iletisim">İletişim</a>
+      <a href="hakkinda.html">Hakkımda</a>
+      <span class="lang-switch"><a href="index.html" class="active">TR</a><a href="#">EN</a></span>
+    </nav>
+  </div>
+  <div class="nav-overlay"></div>
+</header>
 
-  toggle.addEventListener('click', function () {
-    nav.classList.contains('open') ? closeMenu() : openMenu();
-  });
-  if (overlay) overlay.addEventListener('click', closeMenu);
-  nav.querySelectorAll('a').forEach(function (a) {
-    a.addEventListener('click', closeMenu);
-  });
-});
+<section class="hero-slider">
+  <div class="slides">
+    <img class="slide active" src="1.png" alt="">
+    <img class="slide" src="2.png" alt="">
+    <img class="slide" src="3.png" alt="">
+    <img class="slide" src="4.png" alt="">
+  </div>
+  <button class="slide-arrow prev" aria-label="Önceki görsel" type="button">‹</button>
+  <button class="slide-arrow next" aria-label="Sonraki görsel" type="button">›</button>
+  <div class="slide-dots">
+    <button class="dot active" data-index="0" aria-label="1. görsel" type="button"></button>
+    <button class="dot" data-index="1" aria-label="2. görsel" type="button"></button>
+    <button class="dot" data-index="2" aria-label="3. görsel" type="button"></button>
+    <button class="dot" data-index="3" aria-label="4. görsel" type="button"></button>
+  </div>
+</section>
 
-// Hero slayt gösterisi
-document.addEventListener('DOMContentLoaded', function () {
-  var slider = document.querySelector('.hero-slider');
-  if (!slider) return;
-  var slides = slider.querySelectorAll('.slide');
-  var dots = slider.querySelectorAll('.dot');
-  var prevBtn = slider.querySelector('.slide-arrow.prev');
-  var nextBtn = slider.querySelector('.slide-arrow.next');
-  var current = 0;
-  var timer;
+<div class="quote-block">
+  <p>"Amacım yalnızca bir bilgi kaynağı sunmak değil; işitme kaybıyla yaşayan bireylerin ve ailelerinin, süreci daha net ve güvenle anlayabilmesini sağlamak."</p>
+</div>
 
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
-  }
+<div id="kategoriler" class="section-head">
+  <div class="eyebrow">Kategoriler</div>
+  <h2>Nereden başlamak istersin?</h2>
+</div>
 
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
+<div class="categories">
+  <a class="category-card" href="kategori-dil-gelisimi.html">
+    <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M8 9h8M8 13h5M21 12c0 4.97-4.03 9-9 9-1.6 0-3.1-.42-4.4-1.15L3 21l1.3-3.9C3.5 15.7 3 13.9 3 12c0-4.97 4.03-9 9-9s9 4.03 9 9z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h3>İşitme ve Dil Gelişimi</h3>
+    <p>Konuşma ve dil edinimi üzerine</p>
+  </a>
+  <a class="category-card" href="kategori-rehabilitasyon.html">
+    <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1116 0 8 8 0 01-16 0zM12 8v4l3 3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h3>İşitsel Rehabilitasyon</h3>
+    <p>Dinleme becerilerinin gelişimi</p>
+  </a>
+  <a class="category-card" href="kategori-koklear-implant.html">
+    <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M6 8v8M18 8v8" stroke-linecap="round"/></svg></div>
+    <h3>Koklear İmplant Süreci</h3>
+    <p>Değerlendirmeden sonrasına</p>
+  </a>
+  <a class="category-card" href="kategori-notobilim.html">
+    <div class="cat-icon"><svg viewBox="0 0 24 24"><path d="M9.5 2a5.5 5.5 0 00-5.5 5.5c0 1.5.5 2.5 1.5 3.5L4 13a2 2 0 002 2h1v3a2 2 0 002 2h1v-3M14.5 2a5.5 5.5 0 015.5 5.5c0 1.5-.5 2.5-1.5 3.5L20 13a2 2 0 01-2 2h-1v3a2 2 0 01-2 2h-1v-3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+    <h3>İşitme ve Nörobilim</h3>
+    <p>Beynin işitsel işleme biçimi</p>
+  </a>
+</div>
 
-  function startAuto() {
-    clearInterval(timer);
-    timer = setInterval(next, 5000);
-  }
+<div id="son-yazilar" class="section-head">
+  <div class="eyebrow">Kategori Yazıları</div>
+  <h2>Son yazılar</h2>
+</div>
 
-  if (nextBtn) nextBtn.addEventListener('click', function () { next(); startAuto(); });
-  if (prevBtn) prevBtn.addEventListener('click', function () { prev(); startAuto(); });
-  dots.forEach(function (dot, i) {
-    dot.addEventListener('click', function () { goTo(i); startAuto(); });
-  });
+<div class="article-list">
+  <a class="article-row" href="articles/koklear-implant-nedir.html">
+    <span class="art-title">Koklear İmplant Nedir? Süreç Nasıl İşler?</span>
+    <span class="art-date">Örnek yazı</span>
+  </a>
+</div>
 
-  startAuto();
-});
+<div class="section-head">
+  <div class="eyebrow">Yorumlar</div>
+  <h2>Okuyanlar ne diyor?</h2>
+</div>
+
+<div class="testimonials">
+  <div class="testimonial">
+    <p>Yorum örneği — beğendiğin yorumları buraya ekleyeceğiz.</p>
+    <div class="who">Bir okuyucu</div>
+  </div>
+  <div class="testimonial">
+    <p>İkinci yorum örneği — seçtiklerin burada görünecek.</p>
+    <div class="who">Bir okuyucu</div>
+  </div>
+</div>
+
+<div id="iletisim" class="contact-band">
+  <h2>Sorularınız mı var?</h2>
+  <p>İşitme kaybı, koklear implant süreci veya işitsel rehabilitasyon hakkında bana ulaşabilirsiniz.</p>
+  <a class="btn" href="index.html#iletisim">İletişime geç</a>
+</div>
+<footer class="site-footer">
+  <p>© 2026 İrem Yemeniciler</p>
+  <p>Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
