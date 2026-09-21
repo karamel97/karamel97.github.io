@@ -26,38 +26,21 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-// Hero slayt gösterisi
+// Scroll'da nazikçe beliren öğeler
 document.addEventListener('DOMContentLoaded', function () {
-  var slider = document.querySelector('.hero-slider');
-  if (!slider) return;
-  var slides = slider.querySelectorAll('.slide');
-  var dots = slider.querySelectorAll('.dot');
-  var prevBtn = slider.querySelector('.slide-arrow.prev');
-  var nextBtn = slider.querySelector('.slide-arrow.next');
-  var current = 0;
-  var timer;
-
-  function goTo(index) {
-    slides[current].classList.remove('active');
-    dots[current].classList.remove('active');
-    current = (index + slides.length) % slides.length;
-    slides[current].classList.add('active');
-    dots[current].classList.add('active');
+  var items = document.querySelectorAll('.reveal');
+  if (!items.length) return;
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(function (el) { el.classList.add('in'); });
+    return;
   }
-
-  function next() { goTo(current + 1); }
-  function prev() { goTo(current - 1); }
-
-  function startAuto() {
-    clearInterval(timer);
-    timer = setInterval(next, 5000);
-  }
-
-  if (nextBtn) nextBtn.addEventListener('click', function () { next(); startAuto(); });
-  if (prevBtn) prevBtn.addEventListener('click', function () { prev(); startAuto(); });
-  dots.forEach(function (dot, i) {
-    dot.addEventListener('click', function () { goTo(i); startAuto(); });
-  });
-
-  startAuto();
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  items.forEach(function (el) { observer.observe(el); });
 });
