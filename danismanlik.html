@@ -2,73 +2,107 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Danışmanlık — İrem Yemeniciler</title>
-<meta name="description" content="Odyoloji ve işitsel nörobilim temelli, kişiye özel danışmanlık ve rehberlik.">
+<meta name="description" content="İşitme, dil gelişimi ve nörobilim üzerine eğitim ve seminerler.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="logo">İrem Yemeniciler</a>
+    <a href="index.html" class="logo-block">
+      <img src="logo.png" alt="İrem Yemeniciler logo">
+      <span class="logo-text">
+        <span class="l1">İrem Yemeniciler</span>
+        <span class="l2">İşitme ve Dil Atölyesi</span>
+      </span>
+    </a>
     <button class="menu-toggle" aria-label="Menü" type="button">
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav">
       <a href="index.html">Anasayfa</a>
-      <a href="danismanlik.html" class="active">Danışmanlık</a>
-      <a href="index.html#konular">Yazılar</a>
-      <a href="kategori-notobilim.html">Bilim &amp; Dinleme</a>
-      <a href="hakkinda.html">Hakkımda</a>
-      <a href="index.html#iletisim">İletişim</a>
+      <div class="nav-dropdown">
+        <a href="index.html#kategoriler">Kategoriler</a>
+        <div class="nav-dropdown-menu">
+          <a href="kategori-dil-iletisim.html">Dil ve İletişim</a>
+          <a href="kategori-isitme-dinleme.html">İşitme ve Dinleme</a>
+          <a href="kategori-ogrenme-bilis.html">Öğrenme ve Biliş</a>
+          <a href="kategori-beyin-gelisim.html">Beyin ve Gelişim</a>
+        </div>
+      </div>
+      <a href="danismanlik.html">Danışmanlık</a>
+      <a href="kitap-ve-oyun.html">Kitap ve Oyun</a>
+      <a href="hakkinda.html" class="badge">Hakkımda</a>
       <span class="lang-switch"><a href="danismanlik.html" class="active">TR</a><a href="#">EN</a></span>
     </nav>
   </div>
   <div class="nav-overlay"></div>
 </header>
 
-<div class="article-header" style="max-width:760px;">
-  <div class="art-eyebrow">Danışmanlık</div>
-  <h1>İşitme konusunda bilimsel temelli rehberlik.</h1>
-  <div class="article-meta" style="max-width:56ch; margin:0 auto;">Bu sayfada anlatılanlar genel bilgilendirme amaçlıdır; tanı veya tedavi vaadi içermez.</div>
+<div class="section-head" style="margin-top:70px;">
+  <div class="eyebrow">Danışmanlık</div>
+  <h2>Eğitim ve Seminerler</h2>
+</div>
+<p style="max-width:560px; margin:0 auto 50px; padding:0 40px; text-align:center; color:var(--ink-soft); font-size:15px;">Aşağıdaki eğitimlerden birini seçerek içeriği hakkında detaylı bilgi alabilirsiniz.</p>
+
+<div class="courses">
+  <a class="course-card" href="#" style="text-decoration:none; display:block;">
+    <span class="course-tag">Ebeveynler İçin</span>
+    <h3>Koklear İmplant Sürecine Hazırlık</h3>
+    <p>Süreç öncesi merak edilenleri anlatan kısa bir eğitim semineri.</p>
+    <span class="cta">Detayları gör →</span>
+  </a>
+  <a class="course-card" href="#" style="text-decoration:none; display:block;">
+    <span class="course-tag">Ebeveynler İçin</span>
+    <h3>Evde İşitsel Rehabilitasyon</h3>
+    <p>Cihaz sonrası günlük hayatta uygulanabilecek pratik egzersizler.</p>
+    <span class="cta">Detayları gör →</span>
+  </a>
+  <a class="course-card" href="#" style="text-decoration:none; display:block;">
+    <span class="course-tag">Profesyoneller İçin</span>
+    <h3>Örnek seminer başlığı</h3>
+    <p>Bu seminerin kısa bir açıklaması buraya gelecek.</p>
+    <span class="cta">Detayları gör →</span>
+  </a>
+  <a class="course-card" href="#" style="text-decoration:none; display:block;">
+    <span class="course-tag">Profesyoneller İçin</span>
+    <h3>Örnek seminer başlığı</h3>
+    <p>Bu seminerin kısa bir açıklaması buraya gelecek.</p>
+    <span class="cta">Detayları gör →</span>
+  </a>
 </div>
 
-<div class="article-body" style="max-width:720px;">
-  <h2>Kimler için?</h2>
-  <p>İşitme kaybı yeni fark edilmiş bireyler ve aileleri; koklear implant sürecini değerlendiren ya da bu süreçte olan kişiler; cihaz sonrası işitsel rehabilitasyon hakkında bilgi almak isteyenler; çocuğunun dil ve işitme gelişimi hakkında sorusu olan ebeveynler.</p>
-
-  <h2>Hangi konularda yardımcı olabilirim?</h2>
-  <ul>
-    <li>İşitme kaybının niteliğini ve olası nedenlerini anlamak</li>
-    <li>Koklear implant sürecine dair sorular — değerlendirme, ameliyat sonrası beklentiler, rehabilitasyon</li>
-    <li>İşitsel rehabilitasyon ve dinleme becerilerinin geliştirilmesi</li>
-    <li>İşitme kaybının dil ve konuşma gelişimine etkisi</li>
-    <li>İşitme ile beyin/bilişsel süreçler arasındaki ilişkiyi anlamak</li>
-  </ul>
-
-  <h2>Süreç nasıl işler?</h2>
-  <p>İlk adım, durumunuzu ve sorularınızı anlayabileceğim kısa bir görüşmedir. Buradan sonra, ihtiyacınıza göre bilgilendirici bir yönlendirme ya da hangi uzmanlık alanına (odyolog, KBB, konuşma-dil terapisti vb.) başvurmanın uygun olacağı konusunda rehberlik sunarım.</p>
-
-  <blockquote>Bu danışmanlık, mevcut bir tıbbi tanı veya tedaviyi değiştirmez; bilgilenme ve doğru yönlendirme sürecine destek olmayı amaçlar.</blockquote>
-
-  <h2>Sonraki adım</h2>
-  <p>Sorularınızı iletmek için aşağıdaki iletişim bağlantısını kullanabilirsiniz.</p>
-  <p><a href="index.html#iletisim" style="font-weight:600; border-bottom:1.5px solid var(--accent); padding-bottom:2px;">İletişime geç →</a></p>
-</div>
-
-<footer class="site-footer-v2">
-  <div class="wrap">
-    <div class="footer-links">
-      <a href="egitim.html">Eğitim</a>
-      <a href="oneriler.html">Öneriler</a>
-      <a href="uzman-alani.html">Uzman Alanı</a>
+<footer class="site-footer" style="margin-top:80px;">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Kategoriler</h4>
+      <a href="kategori-dil-iletisim.html">Dil ve İletişim</a>
+      <a href="kategori-isitme-dinleme.html">İşitme ve Dinleme</a>
+      <a href="kategori-ogrenme-bilis.html">Öğrenme ve Biliş</a>
+      <a href="kategori-beyin-gelisim.html">Beyin ve Gelişim</a>
     </div>
-    <div class="footer-meta">© 2026 İrem Yemeniciler · Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</div>
+    <div class="footer-col">
+      <h4>Keşfet</h4>
+      <a href="danismanlik.html">Danışmanlık</a>
+      <a href="kitap-ve-oyun.html">Kitap ve Oyun</a>
+      <a href="hakkinda.html">Hakkımda</a>
+    </div>
+    <div class="footer-col contact">
+      <h4>İletişim</h4>
+      <a href="mailto:iremyemeniciler@hotmail.com">E-mail: iremyemeniciler@hotmail.com</a>
+      <a class="ig-link" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1F1E1B" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+      </a>
+    </div>
   </div>
+  <div class="footer-bottom">© 2026 İrem Yemeniciler</div>
 </footer>
+
+<button class="to-top" aria-label="Yukarı çık" type="button">↑</button>
 
 <script src="script.js"></script>
 </body>
