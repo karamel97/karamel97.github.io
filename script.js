@@ -44,3 +44,24 @@ document.addEventListener('DOMContentLoaded', function () {
   }, { threshold: 0.15 });
   items.forEach(function (el) { observer.observe(el); });
 });
+
+// Yukarı çık butonu
+document.addEventListener('DOMContentLoaded', function () {
+  var btn = document.querySelector('.to-top');
+  if (!btn) return;
+
+  function toggleVisibility() {
+    if (window.scrollY > 500) {
+      btn.classList.add('show');
+    } else {
+      btn.classList.remove('show');
+    }
+  }
+
+  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  toggleVisibility();
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+});
