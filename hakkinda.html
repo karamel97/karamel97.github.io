@@ -2,28 +2,41 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Hakkımda — İrem Yemeniciler</title>
+<meta name="description" content="Odyolog ve nörobilim uzmanı İrem Yemeniciler hakkında.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="logo">İrem Yemeniciler</a>
+    <a href="index.html" class="logo-block">
+      <img src="logo.png" alt="İrem Yemeniciler logo">
+      <span class="logo-text">
+        <span class="l1">İrem Yemeniciler</span>
+        <span class="l2">İşitme ve Dil Atölyesi</span>
+      </span>
+    </a>
     <button class="menu-toggle" aria-label="Menü" type="button">
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav">
       <a href="index.html">Anasayfa</a>
-      <a href="index.html#kategoriler">Kategoriler</a>
-      <a href="egitim.html">Eğitim</a>
-      <a href="oneriler.html">Öneriler</a>
-      <a href="uzman-alani.html">Uzman</a>
-      <a href="index.html#iletisim">İletişim</a>
-      <a href="hakkinda.html">Hakkımda</a>
+      <div class="nav-dropdown">
+        <a href="index.html#kategoriler">Kategoriler</a>
+        <div class="nav-dropdown-menu">
+          <a href="kategori-dil-iletisim.html">Dil ve İletişim</a>
+          <a href="kategori-isitme-dinleme.html">İşitme ve Dinleme</a>
+          <a href="kategori-ogrenme-bilis.html">Öğrenme ve Biliş</a>
+          <a href="kategori-beyin-gelisim.html">Beyin ve Gelişim</a>
+        </div>
+      </div>
+      <a href="danismanlik.html">Danışmanlık</a>
+      <a href="kitap-ve-oyun.html">Kitap ve Oyun</a>
+      <a href="hakkinda.html" class="badge">Hakkımda</a>
       <span class="lang-switch"><a href="hakkinda.html" class="active">TR</a><a href="#">EN</a></span>
     </nav>
   </div>
@@ -49,14 +62,33 @@
   </div>
 </div>
 
-<div class="contact-band" style="margin-top:70px;">
-  <h2>Sorularınız mı var?</h2>
-  <p>Aşağıdaki iletişim sayfasından bana ulaşabilirsiniz.</p>
-  <a class="btn" href="index.html#iletisim">İletişime geç</a>
-</div>
-<footer class="site-footer">
-  <p>© 2026 İrem Yemeniciler</p>
+<footer class="site-footer" style="margin-top:100px;">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Kategoriler</h4>
+      <a href="kategori-dil-iletisim.html">Dil ve İletişim</a>
+      <a href="kategori-isitme-dinleme.html">İşitme ve Dinleme</a>
+      <a href="kategori-ogrenme-bilis.html">Öğrenme ve Biliş</a>
+      <a href="kategori-beyin-gelisim.html">Beyin ve Gelişim</a>
+    </div>
+    <div class="footer-col">
+      <h4>Keşfet</h4>
+      <a href="danismanlik.html">Danışmanlık</a>
+      <a href="kitap-ve-oyun.html">Kitap ve Oyun</a>
+      <a href="hakkinda.html">Hakkımda</a>
+    </div>
+    <div class="footer-col contact">
+      <h4>İletişim</h4>
+      <a href="mailto:iremyemeniciler@hotmail.com">E-mail: iremyemeniciler@hotmail.com</a>
+      <a class="ig-link" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1F1E1B" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+      </a>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 İrem Yemeniciler</div>
 </footer>
+
+<button class="to-top" aria-label="Yukarı çık" type="button">↑</button>
 
 <script src="script.js"></script>
 </body>
