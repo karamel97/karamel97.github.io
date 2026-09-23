@@ -2,179 +2,205 @@
 <html lang="tr">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>İrem Yemeniciler — Odyolog · MSc Nörobilim</title>
-<meta name="description" content="Odyoloji ve işitsel nörobilimin kesişiminde: işitme kaybı olan bireyler ve aileleri için bilimsel temelli yazılar ve rehberlik.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>İrem Yemeniciler — İşitme ve Dil Atölyesi</title>
+<meta name="description" content="İşitme, dil gelişimi, koklear implant ve nörobilim üzerine bilimsel temelli rehberlik. İrem Yemeniciler — İşitme ve Dil Atölyesi.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="site-header">
   <div class="wrap">
-    <a href="index.html" class="logo">İrem Yemeniciler</a>
+    <a href="index.html" class="logo-block">
+      <img src="logo.png" alt="İrem Yemeniciler logo">
+      <span class="logo-text">
+        <span class="l1">İrem Yemeniciler</span>
+        <span class="l2">İşitme ve Dil Atölyesi</span>
+      </span>
+    </a>
     <button class="menu-toggle" aria-label="Menü" type="button">
       <span></span><span></span><span></span>
     </button>
     <nav class="site-nav">
       <a href="index.html">Anasayfa</a>
+      <div class="nav-dropdown">
+        <a href="index.html#kategoriler">Kategoriler</a>
+        <div class="nav-dropdown-menu">
+          <a href="kategori-dil-iletisim.html">Dil ve İletişim</a>
+          <a href="kategori-isitme-dinleme.html">İşitme ve Dinleme</a>
+          <a href="kategori-ogrenme-bilis.html">Öğrenme ve Biliş</a>
+          <a href="kategori-beyin-gelisim.html">Beyin ve Gelişim</a>
+        </div>
+      </div>
       <a href="danismanlik.html">Danışmanlık</a>
-      <a href="index.html#konular">Yazılar</a>
-      <a href="kategori-notobilim.html">Bilim &amp; Dinleme</a>
-      <a href="hakkinda.html">Hakkımda</a>
-      <a href="index.html#iletisim">İletişim</a>
+      <a href="kitap-ve-oyun.html">Kitap ve Oyun</a>
+      <a href="hakkinda.html" class="badge">Hakkımda</a>
       <span class="lang-switch"><a href="index.html" class="active">TR</a><a href="#">EN</a></span>
     </nav>
   </div>
   <div class="nav-overlay"></div>
 </header>
 
-<section class="hero-editorial">
+<section class="hero">
   <div class="wrap">
-    <div>
-      <div class="hero-eyebrow">Odyolog · MSc Nörobilim</div>
-      <h1>İşitmeyi hem kulağın hem beynin gözünden ele alıyorum.</h1>
-      <p class="lede">Odyoloji ve işitsel nörobilim geçmişimle, işitme kaybı yaşayan bireylere ve ailelerine bilimsel temelli danışmanlık ve rehberlik sunuyorum.</p>
-      <div class="hero-cta-row">
-        <a class="hero-cta-primary" href="danismanlik.html">Danışmanlık →</a>
-        <a class="hero-cta-secondary" href="hakkinda.html">Hakkımda</a>
-      </div>
-    </div>
-    <div class="hero-portrait">
-      <img src="1.png" alt="İrem Yemeniciler">
-      <span class="cap">İrem Yemeniciler</span>
+    <h1>Merak ettikleriniz, keşfettikleriniz, birlikte öğrendiklerimiz…</h1>
+    <p class="lede">İşitme ve Dil Atölyesi; çocukların ve ailelerin işitme, dil ve iletişim yolculuğunda ihtiyaç duyabilecekleri bilgileri, kaynakları ve rehberliği bir araya getiren bir alan.</p>
+    <a class="btn-pill" href="egitim.html">Eğitim &amp; Seminerler →</a>
+    <div class="hero-photo reveal">
+      <img src="hero.jpg" alt="">
     </div>
   </div>
 </section>
 
-<div class="intro-line reveal">
-  <p>Her bireyin işitme deneyimi <em>farklıdır</em> — bu yüzden her açıklama, dinleyenin sorusuna göre şekillenmeli.</p>
+<section class="statement-section">
+  <div class="statement-divider reveal"><span class="sq"></span><span class="ln"></span></div>
+  <div class="statement-grid reveal">
+    <h2>Öğrenme yolculuğunuz burada başlıyor.</h2>
+    <p>Her işitme yolculuğunun kendine özgü bir başlangıcı vardır. Bir soruyla, bir ihtiyaçla ya da sadece merakla başlayan bu yolculuk; işitmeden anlamaya, öğrenmeden iletişime uzanır.</p>
+  </div>
+</section>
+
+<div id="kategoriler" class="categories-head reveal">
+  <div class="eyebrow">Kategoriler</div>
+  <h2>Konuya göre keşfet</h2>
 </div>
 
-<section class="science-section">
-  <div class="science-head reveal">
-    <div class="eyebrow">Bilim &amp; Dinleme</div>
-    <h2>İşitme sadece kulakla değildir.</h2>
-  </div>
-  <div class="science-flow-wrap reveal">
-    <div class="flow-line-wrap" aria-hidden="true">
-      <svg class="flow-line" viewBox="0 0 900 3" preserveAspectRatio="none">
-        <path d="M0,1.5 L900,1.5" />
-      </svg>
+<div class="cat-list">
+  <a class="cat-row c1 reveal" href="kategori-dil-iletisim.html">
+    <h3 class="cat-title">Dil ve İletişim</h3>
+    <div class="cat-body">
+      <p class="cat-tags">Dil gelişimi · Konuşma gelişimi · Geç konuşma · İletişim · Ebeveyn desteği</p>
+      <p class="cat-intro">Çocuğunuzun dil, konuşma ve iletişim gelişimiyle ilgili merak ettiklerinizi keşfedebilirsiniz.</p>
     </div>
-    <div class="flow">
-      <div class="flow-step">
-        <div class="fs-label">Ses</div>
-        <div class="fs-cap">Hava titreşimi</div>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">
-        <div class="fs-label">Kulak</div>
-        <div class="fs-cap">Mekanik iletim</div>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">
-        <div class="fs-label">İşitsel Yol</div>
-        <div class="fs-cap">Sinirsel iletim</div>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">
-        <div class="fs-label">Beyin</div>
-        <div class="fs-cap">Dikkat, bellek</div>
-      </div>
-      <div class="flow-arrow">→</div>
-      <div class="flow-step">
-        <div class="fs-label">Anlama</div>
-        <div class="fs-cap">Dil, konuşma</div>
-      </div>
+    <span class="cat-arrow">Devamını oku →</span>
+  </a>
+  <a class="cat-row c2 reveal" href="kategori-isitme-dinleme.html">
+    <h3 class="cat-title">İşitme ve Dinleme</h3>
+    <div class="cat-body">
+      <p class="cat-tags">İşitme kaybı · İşitme cihazları · Koklear implant · İşitsel rehabilitasyon · Dinleme becerileri</p>
+      <p class="cat-intro">Çocuğunuzun işitme ve dil gelişimini, dinleme becerilerini ve işitme kaybına yönelik çözüm seçeneklerini ve işitsel re/habilitasyonu keşfedebilirsiniz.</p>
     </div>
+    <span class="cat-arrow">Devamını oku →</span>
+  </a>
+  <a class="cat-row c3 reveal" href="kategori-ogrenme-bilis.html">
+    <h3 class="cat-title">Öğrenme ve Biliş</h3>
+    <div class="cat-body">
+      <p class="cat-tags">Dikkat · Çalışma belleği · Öğrenme · Bilişsel gelişim · İşitsel işlemleme</p>
+      <p class="cat-intro">Çocuğunuzun dikkat, öğrenme ve çalışma belleğini desteklemek ve beynin öğrenme sürecini daha iyi anlamak için keşfedebilirsiniz.</p>
+    </div>
+    <span class="cat-arrow">Devamını oku →</span>
+  </a>
+  <a class="cat-row c4 reveal" href="kategori-beyin-gelisim.html">
+    <h3 class="cat-title">Beyin ve Gelişim</h3>
+    <div class="cat-body">
+      <p class="cat-tags">Beyin gelişimi · Nörobilim · Çocuk gelişimi · Öğrenme ve beyin</p>
+      <p class="cat-intro">Beynin gelişimini, öğrenme süreçlerini ve çocukların gelişim yolculuğunu daha yakından keşfedebilirsiniz.</p>
+    </div>
+    <span class="cat-arrow">Devamını oku →</span>
+  </a>
+</div>
+
+<section class="teaser reveal" style="margin-top:110px;">
+  <div class="teaser-visual" style="background:var(--sky);"></div>
+  <div class="teaser-text">
+    <div class="eyebrow">Danışmanlık</div>
+    <h3>Bilimsel bilgiden günlük yaşama, aileler için rehberlik ve eğitim</h3>
+    <p>İşitme, dil, öğrenme, çocuk gelişimi ve nörobilim üzerine farklı gruplara yönelik bilgilendirici seminer ve eğitimler</p>
+    <a class="btn-pill lilac" href="danismanlik.html">Danışmanlığı keşfet →</a>
   </div>
 </section>
 
-<section id="konular" class="topics-section">
-  <div class="topics-head reveal">
-    <div>
-      <div class="eyebrow">Yazılar</div>
-      <h2>Konuya göre keşfet</h2>
-    </div>
+<section class="teaser reverse reveal">
+  <div class="teaser-text">
+    <div class="eyebrow">Kitap ve Oyun</div>
+    <h3>Evde uygulanabilecek öneriler.</h3>
+    <p>Dil gelişimini ve dinleme becerilerini destekleyen, ailelerin evde kullanabileceği kitap ve oyun önerileri.</p>
+    <a class="btn-pill mustard" href="kitap-ve-oyun.html">Önerileri keşfet →</a>
   </div>
-  <div class="topic-index">
-    <a class="topic-row reveal" href="kategori-koklear-implant.html">
-      <span class="topic-num">01</span>
-      <div class="topic-body">
-        <h3>Koklear İmplant Süreci</h3>
-        <p>Değerlendirmeden ameliyat sonrasına, süreç adım adım.</p>
-      </div>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a class="topic-row reveal" href="kategori-rehabilitasyon.html">
-      <span class="topic-num">02</span>
-      <div class="topic-body">
-        <h3>İşitsel Rehabilitasyon</h3>
-        <p>Cihaz sonrası dinleme becerilerinin gelişimi.</p>
-      </div>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a class="topic-row reveal" href="kategori-dil-gelisimi.html">
-      <span class="topic-num">03</span>
-      <div class="topic-body">
-        <h3>İşitme ve Dil Gelişimi</h3>
-        <p>Konuşma ve dil edinimine etkisi.</p>
-      </div>
-      <span class="topic-arrow">→</span>
-    </a>
-    <a class="topic-row reveal" href="kategori-notobilim.html">
-      <span class="topic-num">04</span>
-      <div class="topic-body">
-        <h3>İşitme ve Nörobilim</h3>
-        <p>Beynin işitsel bilgiyi işleme biçimi.</p>
-      </div>
-      <span class="topic-arrow">→</span>
-    </a>
-  </div>
+  <div class="teaser-visual" style="background:var(--mustard);"></div>
 </section>
 
-<section class="featured-section">
-  <div class="featured-card reveal">
-    <div class="featured-visual"></div>
-    <div class="featured-text">
-      <div class="eyebrow">Öne Çıkan Yazı</div>
-      <h3>Koklear İmplant Nedir? Süreç Nasıl İşler?</h3>
-      <p>Değerlendirmeden ameliyat sonrasına kadar sürecin genel hatları — kimler adaydır, neler beklenir.</p>
-      <a class="read-link" href="articles/koklear-implant-nedir.html">Devamını oku →</a>
+<div class="gallery-head reveal">
+  <div class="eyebrow">Anlardan Kareler</div>
+  <h2>Atölyeden görüntüler</h2>
+</div>
+<div class="gallery-grid reveal">
+  <div class="g-main"><img src="galeri-1.jpg" alt=""></div>
+  <div><img src="galeri-2.jpg" alt=""></div>
+  <div><img src="galeri-3.jpg" alt=""></div>
+</div>
+
+<div class="posts-head reveal">
+  <div class="eyebrow">Son Yazılar</div>
+  <h2>En son eklenenler</h2>
+</div>
+<div class="posts-grid">
+  <a class="post-card reveal" href="articles/koklear-implant-nedir.html">
+    <div class="post-thumb">Görsel</div>
+    <h3>Koklear İmplant Nedir? Süreç Nasıl İşler?</h3>
+    <p>Değerlendirmeden ameliyat sonrasına kadar sürecin genel hatları.</p>
+  </a>
+  <a class="post-card reveal" href="#">
+    <div class="post-thumb">Görsel</div>
+    <h3>Örnek yazı başlığı iki</h3>
+    <p>Bu yazının kısa bir girişi buraya gelecek.</p>
+  </a>
+  <a class="post-card reveal" href="#">
+    <div class="post-thumb">Görsel</div>
+    <h3>Örnek yazı başlığı üç</h3>
+    <p>Bu yazının kısa bir girişi buraya gelecek.</p>
+  </a>
+</div>
+
+<div class="reviews-head reveal">
+  <div class="eyebrow">Geri Bildirimler</div>
+  <h2>Yorumlar</h2>
+</div>
+<div class="reviews-grid">
+  <div class="review-card reveal">
+    <p>"Bu yazı sayesinde sürecin ne olduğunu çok daha net anladım, teşekkürler."</p>
+    <div class="who">— Bir okuyucu</div>
+  </div>
+  <div class="review-card reveal">
+    <p>"Ailemle birlikte okuduk, çok faydalı ve anlaşılır bir anlatım."</p>
+    <div class="who">— Bir okuyucu</div>
+  </div>
+  <div class="review-card reveal">
+    <p>"Aradığım bilgiyi burada, güvenilir bir kaynaktan bulabildim."</p>
+    <div class="who">— Bir okuyucu</div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>Kategoriler</h4>
+      <a href="kategori-dil-iletisim.html">Dil ve İletişim</a>
+      <a href="kategori-isitme-dinleme.html">İşitme ve Dinleme</a>
+      <a href="kategori-ogrenme-bilis.html">Öğrenme ve Biliş</a>
+      <a href="kategori-beyin-gelisim.html">Beyin ve Gelişim</a>
+    </div>
+    <div class="footer-col">
+      <h4>Keşfet</h4>
+      <a href="danismanlik.html">Danışmanlık</a>
+      <a href="kitap-ve-oyun.html">Kitap ve Oyun</a>
+      <a href="hakkinda.html">Hakkımda</a>
+    </div>
+    <div class="footer-col contact">
+      <h4>İletişim</h4>
+      <a href="mailto:iremyemeniciler@hotmail.com">E-mail: iremyemeniciler@hotmail.com</a>
+      <a class="ig-link" href="#" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#1F1E1B" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.2" cy="6.8" r="1"></circle></svg>
+      </a>
     </div>
   </div>
-</section>
-
-<section class="about-snippet">
-  <div class="wrap reveal">
-    <div class="as-photo"><img src="2.png" alt="İrem Yemeniciler"></div>
-    <div class="as-text">
-      <p>Odyoloji lisansımı Başkent Üniversitesi'nde, nörobilim yüksek lisansımı İstanbul Medipol Üniversitesi'nde tamamladım. Bu site, klinik deneyimimi ve bilimsel bakış açımı bir araya getirdiğim kişisel bir alan.</p>
-      <a href="hakkinda.html">Hakkımda daha fazlası →</a>
-    </div>
-  </div>
-</section>
-
-<section id="iletisim" class="closing-cta">
-  <div class="wrap">
-    <p class="line1">İletişim</p>
-    <h2>İşitme yolculuğunuz hakkında konuşalım.</h2>
-    <a class="btn-line" href="danismanlik.html">İşitme Yolculuğunuzu Konuşalım →</a>
-  </div>
-</section>
-
-<footer class="site-footer-v2">
-  <div class="wrap">
-    <div class="footer-links">
-      <a href="egitim.html">Eğitim</a>
-      <a href="oneriler.html">Öneriler</a>
-      <a href="uzman-alani.html">Uzman Alanı</a>
-    </div>
-    <div class="footer-meta">© 2026 İrem Yemeniciler · Bu site bilgilendirme amaçlıdır, tıbbi tavsiye yerine geçmez.</div>
-  </div>
+  <p class="footer-disclaimer">Bu sitedeki içerikler bilgilendirme ve farkındalık oluşturma amacıyla hazırlanmıştır. Paylaşılan bilgiler kişisel tanı veya tedavi yerine geçmez. Kişisel değerlendirme ve tedavi için ilgili sağlık profesyoneline başvurunuz.</p>
+  <div class="footer-bottom">© 2026 İrem Yemeniciler</div>
 </footer>
+
+<button class="to-top" aria-label="Yukarı çık" type="button">↑</button>
 
 <script src="script.js"></script>
 </body>
