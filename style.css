@@ -191,7 +191,8 @@ nav.site-nav a.badge:hover { color: var(--mustard); opacity: .9; }
 .footer-col a:hover { color: var(--sage-deep); }
 .footer-col.contact { text-align: center; }
 .footer-col.contact h4 { text-align: center; }
-.ig-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--sage); margin: 6px 0; }
+.ig-link { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--sage); }
+.footer-col.contact div { text-align: center; }
 .footer-disclaimer { font-size: 12.5px; color: var(--ink-faint); padding-bottom: 40px; }
 .footer-bottom { padding: 20px 0 40px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-faint); }
 @media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; text-align: left !important; } .footer-col.contact, .footer-col.contact h4 { text-align: left; } }
@@ -207,6 +208,20 @@ nav.site-nav a.badge:hover { color: var(--mustard); opacity: .9; }
 .to-top.show { opacity: 1; pointer-events: auto; transform: none; }
 .to-top:hover { background: var(--sage-deep); }
 @media (max-width: 700px) { .to-top { bottom: 18px; right: 18px; width: 42px; height: 42px; } }
+
+/* ---------- Orta boy ekranlar (dizüstü vb.) — biraz sıkılaştır ---------- */
+@media (max-width: 1180px) and (min-width: 821px) {
+  .hero { padding: 48px 0 0; }
+  .statement-section { padding: 70px 0; }
+  .categories-head { margin: 70px auto 32px; }
+  .cat-row { padding: 34px 36px; gap: 24px; }
+  .cat-row .cat-title { width: 220px; font-size: 24px; }
+  .teaser { min-height: 340px; }
+  .teaser-text { padding: 44px; }
+  .gallery-head, .posts-head, .reviews-head { margin-top: 76px; }
+  .gallery-grid { height: 400px; }
+  .site-footer { margin-top: 70px; }
+}
 
 /* ==========================================================================
    Diğer sayfalarla paylaşılan sade bileşenler (kategori/alt sayfalar)
