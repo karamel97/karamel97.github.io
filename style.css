@@ -214,16 +214,16 @@ nav.site-nav a.badge:hover { color: var(--mustard); opacity: .9; }
 .site-footer { max-width: 1200px; margin: 100px auto 0; padding: 56px 40px 0; border-top: 1px solid var(--line); }
 .footer-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 32px; padding-bottom: 40px; }
 .footer-col h4 { font-family: var(--font-display); font-size: 15px; font-weight: 700; margin: 0 0 16px; }
-.footer-col div, .footer-col a { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
+.footer-col > a { display: block; font-size: 14px; color: var(--ink-soft); margin-bottom: 10px; }
 .footer-col a:hover { color: var(--sage-deep); }
-.footer-col.contact { text-align: center; }
-.footer-col.contact h4 { text-align: center; }
-.contact-icons { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px; }
-.contact-icons a { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border-radius: 50%; background: var(--sage); margin: 0; }
-.footer-col.contact .contact-email { text-align: center; }
-.footer-disclaimer { font-size: 12.5px; color: var(--ink-faint); padding-bottom: 40px; }
-.footer-bottom { padding: 20px 0 40px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-faint); }
-@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; text-align: left !important; } .footer-col.contact, .footer-col.contact h4 { text-align: left; } }
+.contact-links { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+.contact-links a { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-soft); margin: 0; }
+.contact-links svg { flex-shrink: 0; }
+.contact-links .sep { width: 1px; height: 18px; background: var(--line); }
+.footer-bottom { padding: 24px 0 40px; border-top: 1px solid var(--line); }
+.footer-disclaimer { font-size: 12.5px; color: var(--ink-faint); margin: 0 0 18px; max-width: 80ch; }
+.footer-copy { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 12.5px; color: var(--ink-faint); line-height: 1.6; }
+@media (max-width: 700px) { .footer-grid { grid-template-columns: 1fr; } }
 
 /* ---------- Yukarı çık butonu ---------- */
 .to-top {
