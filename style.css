@@ -291,6 +291,8 @@ nav.site-nav a.badge:hover { color: var(--mustard); opacity: .9; }
 .about-titles { font-size: 14px; color: var(--ink-soft); margin-bottom: 18px; }
 .about-text p { font-size: 14.5px; line-height: 1.7; margin: 0 0 12px; }
 .about-more { max-width: 1000px; margin: 0 auto; padding: 40px 40px 0; }
+.about-more p, .about-more li { font-size: 14.5px; line-height: 1.7; }
+.about-more p { margin: 0 0 12px; }
 
 .article-header { max-width: 720px; margin: 0 auto; padding: 70px 40px 0; text-align: center; }
 .art-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage-deep); margin-bottom: 18px; }
